@@ -63,7 +63,8 @@ python device_bai3.py
 
 *Bạn sẽ thấy thông báo:*
 ```
-=== SMART LIGHT DEVICE STARTED ===\nĐã kết nối tới MQTT Broker. Đang chờ lệnh...
+=== SMART LIGHT DEVICE STARTED ===
+Đã kết nối tới MQTT Broker. Đang chờ lệnh...
 ```
 
 **Terminal 2 (Chạy Controller để bắt đầu gửi lệnh điều khiển):**
