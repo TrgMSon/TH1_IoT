@@ -61,7 +61,10 @@ Cần mở 2 cửa sổ terminal (cmd/powershell) khác nhau:
 python device_bai3.py
 ```
 
-*Bạn sẽ thấy thông báo: "=== SMART LIGHT DEVICE STARTED ===\nĐã kết nối tới MQTT Broker. Đang chờ lệnh..."*
+*Bạn sẽ thấy thông báo:*
+```
+=== SMART LIGHT DEVICE STARTED ===\nĐã kết nối tới MQTT Broker. Đang chờ lệnh...
+```
 
 **Terminal 2 (Chạy Controller để bắt đầu gửi lệnh điều khiển):**
 
