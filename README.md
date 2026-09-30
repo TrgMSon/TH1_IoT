@@ -61,17 +61,17 @@ Cần mở 2 cửa sổ terminal (cmd/powershell) khác nhau:
 python device_bai3.py
 ```
 
-*Bạn sẽ thấy thông báo: "=== SMART LIGHT DEVICE STARTED ===\nĐã kết nối tới MQTT Broker. Đang chờ lệnh..."
+*Bạn sẽ thấy thông báo: "=== SMART LIGHT DEVICE STARTED ===\nĐã kết nối tới MQTT Broker. Đang chờ lệnh..."*
 
-**Terminal 2 (Chạy Controller để bắt đầu gửi lệnh điều khiển):
+**Terminal 2 (Chạy Controller để bắt đầu gửi lệnh điều khiển):**
 
 ```bash
 python controller_bai3.py
 ```
-*Nhập lệnh ON hoặc OFF để điều khiển thiết bị, hoặc nhập EXIT để kết thúc chương trình Controller.
+*Nhập lệnh ON hoặc OFF để điều khiển thiết bị, hoặc nhập EXIT để kết thúc chương trình Controller.*
 
 ### 3. Kết quả đạt được
-**Bên cửa sổ của Controller:
+**Bên cửa sổ của Controller:**
 ```
 === CONTROLLER APP ===
 
@@ -100,7 +100,7 @@ Nhập lệnh (ON / OFF / EXIT): EXIT
 Đã ngắt kết nối. Kết thúc chương trình Controller.
 ```
 
-** Bên cửa sổ của Device:
+**Bên cửa sổ của Device:**
 ```
 === SMART LIGHT DEVICE STARTED ===
 Đã kết nối tới MQTT Broker. Đang chờ lệnh...
