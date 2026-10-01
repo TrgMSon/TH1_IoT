@@ -46,6 +46,53 @@ Payload: Xin chao tu client Python MQTT - B23DCCN001 - Nguyen Van A
 Time: 10:15:20
 ```
 
+## Bài 2. Mô phỏng cảm biến nhiệt độ và độ ẩm bằng MQTT
+
+### 1. Giới thiệu
+Chương trình mô phỏng đồng thời nhiều thiết bị (sensor01, sensor02...) gửi dữ liệu lên topic tương ứng (iot/lab/sensor01/data, iot/lab/sensor02/data):
+- **Publisher**: Gửi thông tin nhiệt độ, độ ẩm định kỳ 3 giây/lần.
+- **Subscriber**: Lắng nghe và in ra thông điệp nhận được kèm thời gian.
+
+### 2. Cách chạy chương trình
+Cần mở 2 cửa sổ terminal (cmd/powershell) khác nhau:
+
+**Terminal 1 (Chạy Subscriber trước để đứng chờ nhận thông điệp):**
+```bash
+python monitor_subscriber_bai2.py
+```
+*Bạn sẽ thấy thông báo: "[Monitoring] Ket noi thanh cong! Dang lang nghe: iot/lab/+/data"*
+
+**Terminal 2 (Chạy Publisher để bắt đầu gửi thông điệp):**
+```bash
+python sensor_publisher_bai2.py
+```
+
+*Nhấn `Ctrl+C` ở mỗi terminal để dừng chương trình tương ứng.*
+
+### 3. Kết quả đạt được
+**Bên cửa sổ của Publisher:**
+```
+Ket noi Broker thanh cong!
+-> Da gui toi [iot/lab/sensor01/data]: {"device_id": "sensor01", "temperature": 40.1, "humidity": 72.1}
+-> Da gui toi [iot/lab/sensor02/data]: {"device_id": "sensor02", "temperature": 28.5, "humidity": 31.7}
+```
+
+**Bên cửa sổ của Subscriber:**
+```
+------------------------------
+Topic: iot/lab/sensor01/data
+Device: sensor01
+Temperature: 40.1 C
+Humidity: 72.1 %
+CANH BAO: Nhiet do cao
+------------------------------
+Topic: iot/lab/sensor02/data
+Device: sensor02
+Temperature: 28.5 C
+Humidity: 31.7 %
+CANH BAO: Do am thap
+```
+
 ## Bài 3. Ứng dụng điều khiển và phản hồi trạng thái thiết bị đèn qua MQTT
 
 ### 1. Giới thiệu
